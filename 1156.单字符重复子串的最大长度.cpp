@@ -30,6 +30,7 @@ public:
             }
             cur_cnt += k - j;
 
+            // 取最小值是因为两段拼接结果可能要从自身取一个字符填到中间
             ret = std::max(ret, std::min(cnt[text[i] - 'a'], cur_cnt));
             i = j;
         }
